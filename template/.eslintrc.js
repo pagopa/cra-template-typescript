@@ -6,12 +6,12 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:sonarjs/recommended',
-    'prettier',
+    'prettier'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: 'tsconfig.json',
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: ['@typescript-eslint', 'react', 'react-hooks', 'import', 'functional', 'sonarjs'],
   rules: {
@@ -37,19 +37,17 @@ module.exports = {
     'max-classes-per-file': ['error', 1],
     'guard-for-in': 'error',
     complexity: 'error',
-    'arrow-body-style': 'error',
+    'arrow-body-style': ['error', 'always'],
     'import/order': 'error',
     '@typescript-eslint/no-unused-vars': 'off',
     // Enable if we want to enforce the return type for all the functions
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-inferrable-types': 'off',
-    // TODO: added for compatibility. Removing this line we have to remove all the any usage in the code
-    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/array-type': [
       'error',
       {
-        default: 'generic',
-      },
+        default: 'generic'
+      }
     ],
     '@typescript-eslint/await-thenable': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
@@ -59,13 +57,13 @@ module.exports = {
       {
         multiline: {
           delimiter: 'semi',
-          requireLast: true,
+          requireLast: true
         },
         singleline: {
           delimiter: 'semi',
-          requireLast: false,
-        },
-      },
+          requireLast: false
+        }
+      }
     ],
     '@typescript-eslint/no-floating-promises': 'error',
     'no-unused-expressions': 'off',
@@ -87,19 +85,19 @@ module.exports = {
     'sonarjs/no-nested-template-literals': 'warn',
     '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
     'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off',
+    'react/react-in-jsx-scope': 'off'
   },
   overrides: [
     {
       files: ['**/*.test.*'],
       rules: {
-        '@typescript-eslint/no-non-null-assertion': 'off',
-      },
-    },
+        '@typescript-eslint/no-non-null-assertion': 'off'
+      }
+    }
   ],
   settings: {
     react: {
-      version: 'detect',
-    },
-  },
+      version: 'detect'
+    }
+  }
 };
